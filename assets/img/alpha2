@@ -1,0 +1,36 @@
+digraph {
+	graph [bgcolor=white fontcolor=white fontsize=16 label="A Fancy Graph"]
+	node [color=white fillcolor="#006699" fontcolor=white fontname=Helvetica shape=hexagon style=filled]
+	edge [arrowhead=open color=black fontcolor=black fontname=Courier fontsize=12 style=dashed]
+	A [label="A = (-1,oo)"]
+	B [label="B =(-oo,-1)"]
+	C [label="C = (-1,-2)"]
+	D [label="D = (-oo,oo)"]
+	E [label="E = 4"]
+	F [label="F = -2"]
+	G [label="G = -1"]
+	H [label="H = 10"]
+	I [label="I = 12"]
+	J [label="J = 3"]
+	K [label="K = 8"]
+	L [label="L = 3"]
+	A -> B
+	B -> E
+	C -> F
+	A -> C
+	B -> G
+	B -> H
+	C -> I
+	A -> D
+	C -> J
+	D -> K
+	D -> L
+	E -> B [color=red]
+	G -> B [color=red]
+	H -> B [color=red]
+	B -> A [color=red]
+	F -> C [color=red]
+	D [fillcolor=black]
+	B [fillcolor=black]
+	C [fillcolor=black]
+}
