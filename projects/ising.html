@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>Monte Carlo simulation of the Ising model</title>
+<meta charset="UTF-8">
+<meta name="author" content="Vishal Golcha">
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.0/darkly/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="plugins/bootstrap-select.min.css">
+<link rel="stylesheet" href="plugins/bootstrap-slider.min.css">
+
+</head>
+
+<body>
+<div class="container">
+<div class="page-header">
+  <h1>Monte Carlo simulation of the Ising model</h1>
+</div>
+<div class="row">
+  <div class="col-md-6" style="margin-bottom: 40px;">
+    <canvas id="ising" width=399 height=399 style="background-color:#eeeeee;"></canvas>
+    <canvas id="graph" width=399 style="background-color:#202020;"></canvas>
+    <button id="clear" type="button" class="btn btn-xs btn-default">clear</button>
+    <canvas id="graph2" width=399 style="background-color:#202020;"></canvas>
+    <!-- <button id="clear" type="button" class="btn btn-xs btn-default">clear</button> -->
+    <!-- <canvas id="graph3" width=399 style="background-color:#202020;"></canvas> -->
+    <!-- <button id="clear" type="button" class="btn btn-xs btn-default">clear</button> -->
+  </div>
+
+  <div class="col-md-6">
+  
+    <div class="btn-group" role="group">
+     <button id="start" type="button" class="btn btn-primary">Start</button>
+     <button id="stop"  type="button" class="btn btn-primary">Stop</button>
+     <button id="step"  type="button" class="btn btn-primary">Step</button>
+    </div>
+
+    <select class="selectpicker" name="algorithm" id="algorithm">
+     <option value="0">Heat-bath method
+     <option value="1">Swendsen-Wang algorithm
+     <option value="2">Wolff algorithm
+    </select>
+  
+  </div>
+
+  <div class="col-md-6" style="margin-top: 40px; margin-bottom: 20px;">
+    <input style="width:80%;" type="text" id="temperature">
+    <button id="auto" type="button" class="btn btn-xs btn-primary">Auto</button>
+    <p>Temperature \(\quad T= \) <span id="temperature_value">2.0</span>
+    </p>
+  </div>
+
+  <div class="col-md-6"  >
+    <p style="font-family:Helvetica; font-size:120% ; border:2px; border-style:solid; border-color:#eeeeee; padding: 0.5em;border-radius:25px">Each dot corresponds to a micro magnetic moment, it is displayed in blue if the magnetic moment is up, and white in the
+    downward direction.
+    </p>
+        <p style="font-family:Helvetica; font-size:120% ; border:2px; border-style:solid; border-color:#eeeeee; padding: 0.5em;border-radius:25px">You can change the algorithm from the drop down menu, the temperature from the slider. You can resume and stop
+    automatic updating with Start / Stop button. Each time you press the Step button, the state is updated one step at a
+    time. The size is L = 100 of the periodic boundary condition, The magnetic field is H = 0.0.The update
+    time interval is changed by algorithm. When you press the Auto button, it automatically lowers the temperature slowly.
+    </p>
+    <p></p>
+        <p style="font-family:Helvetica; font-size:120% ; border:2px; border-style:solid; border-color:#eeeeee; padding: 0.5em;border-radius:25px">In the graph below, the horizontal axis is the temperature and the vertical axis is the magnetization plot for the First Graph and the Energy Plot on the second. The color
+    of the point changes according to the selected algorithm.
+    </p>
+    <p></p>
+        <p style="font-family:Helvetica; font-size:120% ; border:2px; border-style:solid; border-color:#eeeeee; padding: 0.5em;border-radius:25px">Phase shift temperature Tc ≃ 2.27 The rapid change before and after is interesting.</p>
+  </div>
+
+</div> <!-- row -->
+</div> <!-- container -->
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="plugins/bootstrap-select.min.js"></script>
+<script src="plugins/bootstrap-slider.min.js"></script>
+<script src="ising.js"></script>
+</body>
+
+</html>
