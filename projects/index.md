@@ -30,6 +30,9 @@ I have worked on projects mainly in the domains at the intersection of image pro
 2. [**Statistical Machine Translation**](https://github.com/vishalgolcha/NMT)
     An encoder-decoder based architecture in TensorFlow for translating text between English and French on a small coropora.
 
+## Computational Physics
+1. [**Monte Carlo Simulations of Ising Model**](/projects/ising.html)
+
 ## Artificial Intelligence
     
 Links to be updated soon.
